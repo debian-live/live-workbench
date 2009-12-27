@@ -1,0 +1,12 @@
+* Maybe use autoproject to establish initial project structure?
+* Need a Makefile to export live-workbench.mm in more accessible formats.
+* Clean up initial project and make first commit in git.
+
+See also:
+
+doc/live-workbench.mm
+    Freemind mindmap to brainstorm ideas for the project
+
+doc/live-workbench-stories.otl
+    vim-outliner outline of possible stories to implement in cucumber
+

@@ -1,0 +1,41 @@
+live-workbench stories
+	Live systems developer starts a project
+		story
+			: The live system developer opens up a shell, makes an empty
+			: directory to put the project in, changes to it, types a command
+			: to start a project, and sees a message indicating that the
+			: project was created (using some default template for a project).
+		essential
+		differs from l-h by
+			creating project structure
+				Rakefile
+				config
+				scripts
+				test
+				doc
+	Live systems developer configures the first image
+		story
+			: The live system developer types a command from the top level
+			: project directory and sees a message indicating that an image
+			: configuration was created (using live-helper's own defaults).
+		essential
+		differs from l-h by
+			initializing but not executing the config in scripts/config
+	Live systems developer views an image configuration
+	Live systems developer builds an image
+		story
+			: The live system developer types a command from the top level
+			: project directory and sees the colorized output from a build as
+			: it progresses.  After some time, the build finishes and the
+			: developer sees a message indicating a successful build,
+			: including the name of the directory where the build products
+			: (image, log, lists of image contents) have been created. 
+		essential
+		differs from l-h by colorizing output as it is produced and saving a log 
+	Live systems developer views an image build log
+	Live systems developer tests an image
+	Live systems developer views an image test log
+	Live systems developer changes an image test
+	Live systems developer changes an image configuration
+	Live systems developer publishes an image
+
