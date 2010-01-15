@@ -1,5 +1,16 @@
+require 'tmpdir'
+
+Before do
+  @project_dir=Dir.mktmpdir 'live-workbench_project_'
+end
+
 Given /^I am in an empty directory where I want the project to be created$/ do
-  Dir.new('.').count <= 2
+  Dir.chdir @project_dir
+  Dir.new(Dir.pwd).count.should <= 2
+end
+
+After do
+  File.rm_rf @project_dir
 end
 
 When /^I start the project$/ do
