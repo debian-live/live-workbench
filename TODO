@@ -1,6 +1,6 @@
-* Maybe use autoproject to establish initial project structure?
-* Need a Makefile to export live-workbench.mm in more accessible formats.
-* Clean up initial project and make first commit in git.
+* Need a Rakefile to
+  - export live-workbench.mm in more accessible formats
+  - run tests: cucumber, etc.
 
 See also:
 
