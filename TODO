@@ -1,6 +1,11 @@
-* Need a Rakefile to
-  - export live-workbench.mm in more accessible formats
-  - run tests: cucumber, etc.
+* specs for initial code
+  - did it kinda ass-backwards with the first feature, as the feature should
+    drive out specs for classes and in turn, the implementation, not the other
+    way around
+* Config for the app needs work: what does the rest of the world do?
+  - i have a feeling I'm reinventing the wheel for detecting whether
+    the app is run all-in-one-dir vs. installed in /usr or /usr/local
+* Need a CLI
 
 See also:
 
