@@ -4,6 +4,7 @@ Feature: developer starts a project
     I want to start a project
     So that I can develop a live system
 
+    @new_project_dir
     Scenario: start a project
 	Given I am in an empty directory where I want the project to be created
 	When I start the project
