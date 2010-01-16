@@ -6,11 +6,14 @@ Given /^I am in an empty directory where I want the project to be created$/ do
 end
 
 When /^I start the project$/ do
-  pending
+  @messenger=StringIO.new
+  lw=LiveWorkbench.new(@messenger)
+  lw.init
 end
 
 Then /^the directory is populated with a standard project structure$/ do
-  pending
+  Dir['*','*/**'].sort.should == ["AUTHORS", "COPYING", "Makefile", "README", "TODO",
+    "scripts", "scripts/build", "scripts/clean", "scripts/config"]
 end
 
 Then /^I see a message indicating that the project was created$/ do
