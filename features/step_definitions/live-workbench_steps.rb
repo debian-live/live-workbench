@@ -17,7 +17,7 @@ Then /^the directory is populated with a standard project structure$/ do
 end
 
 Then /^I see a message indicating that the project was created$/ do
-  pending
+  @messenger.string.split("\n").should include("Project created from default template")
 end
 
 Given /^I am in the project top\-level directory$/ do
