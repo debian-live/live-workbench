@@ -1,0 +1,13 @@
+#!/bin/sh
+
+MIRROR_DEBIAN="${1:-http://http.us.debian.org/debian/}"
+MIRROR_SECURITY="${2:-http://http.us.debian.org/debian-security/}"
+
+lh config noautoconfig \
+	--distribution squeeze \
+	--mirror-bootstrap ${MIRROR_DEBIAN} \
+	--mirror-chroot ${MIRROR_DEBIAN} \
+	--mirror-chroot-security ${MIRROR_SECURITY} \
+	--packages-lists "standard" \
+	${@}
+
