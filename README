@@ -1,1 +1,27 @@
 A front end for developing projects that create live images using live-helper.
+
+There are no dependencies (yet) other than Ruby itself to build, install &
+run this project.  Just type:
+
+$ ruby setup.rb config
+$ sudo ruby setup.rb install
+
+Development of this project requires a few more things, all of which are
+available as Debian packages (Squeeze or later) except for the gems for
+cucumber and rspec.  Those can be installed with:
+
+$ gem install cucumber
+$ gem install rspec
+
+    freemind
+	to view/edit doc/*.mm or convert it to html with 'rake doc:developer' task
+    vim-vimoutliner
+	to view/edit doc/*.otl
+    rubygems
+	for cucumber, rspec
+    cucumber
+	>= 0.6.1
+    rspec
+	>= 1.3.0
+    rake
+	>= 0.8.7

@@ -5,7 +5,6 @@
     the app is run all-in-one-dir vs. installed in /usr or /usr/local
 * Pay attention to other standard aspects of upstream packaging:
   - setup.rb to install
-  - automate running all specs
 
 See also:
 
