@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'rake'
+require 'spec/rake/spectask'
+
 namespace 'doc' do
     XSLTPROC='/usr/bin/xsltproc'
     XSL_BASE='/usr/share/freemind/accessories'
@@ -7,7 +11,7 @@ namespace 'doc' do
 	proc{|t| t.sub(/\.mm\.html$/,'.mm')},
 	XSLTPROC,TOHTML_XSL
     ] do |t|
-	mkdir t.name 
+	mkdir_p t.name 
 	sh "#{XSLTPROC} --output #{File.join(t.name,'index.html')} #{TOHTML_XSL} #{t.source}"
 	cp Dir[File.join(XSL_BASE,'*.png')],t.name
 	cp File.join(XSL_BASE,'treestyles.css'),t.name
@@ -21,4 +25,8 @@ end
 desc 'Remove any generated products'
 task :clean do
     rm_rf 'doc/live-workbench.mm.html'
+end
+
+Spec::Rake::SpecTask.new do |t|
+    t.spec_files = FileList['spec/**/*.rb']
 end
