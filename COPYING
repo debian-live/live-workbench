@@ -2,25 +2,57 @@ COPYING for live-workbench
 
 live-workbench - A front end for creating and managing projects using live-helper
 
-Copyright (c) 2009-2010 by Ben Armstrong <synrg@debian.org>
+    Copyright (c) 2009-2010 by Ben Armstrong <synrg@debian.org>
 
-http://git.debian.org/?p=debian-live/live-workbench.git
+    http://git.debian.org/?p=debian-live/live-workbench.git
 
-Distributed under the terms of the GPL License, version 2 or (at your option)
-any later version.
+    Distributed under the terms of the GPL License, version 2 or (at your option)
+    any later version, a copy of which is included below.
+
+    live-workbench also includes the following files under the following license
+    terms:
 
 doc/marktree.js - MarkTree JavaScript code
 
-Distributed under the terms of the MIT License.
-See "LICENCE.MIT" or http://www.opensource.org/licenses/mit-license.php for details.
+    Copyright (c) 2004 by Miika Nurminen
 
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
-for the specific language governing rights and limitations under the
-License.
+    Distributed under the terms of the MIT License.
+    See "LICENCE.MIT" or http://www.opensource.org/licenses/mit-license.php for details.
 
-Miika Nurminen, 12.7.2004.
-----------------------------------------
+    Software distributed under the License is distributed on an "AS IS" basis,
+    WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+    for the specific language governing rights and limitations under the
+    License.
+
+setup.rb - a generic installer for Ruby programs
+
+    It was downloaded from http://i.loveruby.net/en/projects/setup/
+
+    Upstream Author: 
+
+	Minero Aoki <aamine@loveruby.net>
+
+    Copyright: 
+
+	Copyright (c) 2000-2005 Minero Aoki
+
+    License:
+
+	This package is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Lesser General Public
+	License as published by the Free Software Foundation, version 2.1 of
+	the License.
+
+	This package is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	Lesser General Public License for more details.
+
+	You should have received a copy of the GNU Lesser General Public
+	License along with this package; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+-------------------------------------
 
 		    GNU GENERAL PUBLIC LICENSE
 		       Version 2, June 1991
