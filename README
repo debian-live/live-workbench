@@ -23,5 +23,6 @@ $ gem install rspec
 	>= 0.6.1
     rspec
 	>= 1.3.0
+	librspec-ruby1.8 1.2.9 package in Debian may work - untested
     rake
 	>= 0.8.7
