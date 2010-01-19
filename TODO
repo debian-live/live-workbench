@@ -1,10 +1,17 @@
-* finish specs for initial code
-* Need a CLI
-* Config for the app needs work: what does the rest of the world do?
-  - i have a feeling I'm reinventing the wheel for detecting whether
-    the app is run all-in-one-dir vs. installed in /usr or /usr/local
-* Pay attention to other standard aspects of upstream packaging:
-  - setup.rb to install
+* refactor duplicate code in spec & feature step definitions
+  - the feature is supposed to exercise the whole stack, from view through
+    controller to model.  the duplicate code indicates a bigger problem, that
+    the feature therefore tests too low a leve with the model & view tightly
+    coupled to controller in core.rb
+  - follow MVC
+    - model = project.rb (an abstraction of filesystem)
+    - controller = core.rb -> rename to controller.rb?
+    - view = cli.rb
+* config.rb
+  - generate config via setup.rb hook
+  - see example code from Mozillion
+    - http://svn.luon.net/filedetails.php?repname=goat&path=/trunk/lib/pre-setup.rb
+    - http://svn.luon.net/filedetails.php?repname=goat&path=/trunk/lib/post-clean.rb
 
 See also:
 
