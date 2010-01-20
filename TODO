@@ -5,7 +5,7 @@
     coupled to controller in core.rb
   - follow MVC
     - model = project.rb (an abstraction of filesystem)
-    - controller = core.rb -> rename to controller.rb?
+    x controller = controller.rb
     - view = cli.rb
 * config.rb
   - generate config via setup.rb hook

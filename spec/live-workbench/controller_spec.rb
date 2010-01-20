@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 require 'tmpdir'
 
-describe LiveWorkbench::Core do
+describe LiveWorkbench::Controller do
     before :each do
 	@messenger=StringIO.new
-	@lw=LiveWorkbench::Core.new @messenger
+	@lw=LiveWorkbench::Controller.new @messenger
 	# FIXME: copied from features/support/hooks.rb
 	@project_dir=Dir.mktmpdir 'live-workbench_project_'
     end

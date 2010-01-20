@@ -1,8 +1,8 @@
 require 'live-workbench/config'
-require 'live-workbench/core'
+require 'live-workbench/controller'
 
 module LiveWorkbench
     def self.new *args
-	Core.new *args
+	Controller.new *args
     end
 end

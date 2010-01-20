@@ -1,5 +1,5 @@
 module LiveWorkbench
-    class Core
+    class Controller
 	attr_accessor :config
 
 	def initialize messenger=STDOUT
