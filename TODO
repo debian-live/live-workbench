@@ -6,7 +6,10 @@
   - follow MVC
     - model = project.rb (an abstraction of filesystem)
     x controller = controller.rb
-    - view = cli.rb
+    x view = cli.rb
+    - review controller/view relationship
+      - how does controller make changes to a view?  currently there is no
+        way (e.g. rails 'render')
 * config.rb
   - generate config via setup.rb hook
   - see example code from Mozillion

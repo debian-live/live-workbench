@@ -3,8 +3,7 @@ require 'tmpdir'
 
 describe LiveWorkbench::Controller do
     before :each do
-	@messenger=StringIO.new
-	@lw=LiveWorkbench::Controller.new @messenger
+	@controller=LiveWorkbench::Controller.new
 	# FIXME: copied from features/support/hooks.rb
 	@project_dir=Dir.mktmpdir 'live-workbench_project_'
     end
@@ -14,11 +13,11 @@ describe LiveWorkbench::Controller do
 	FileUtils.rm_rf @project_dir
     end
 
-    describe '#init' do
+    describe '#init','(default)' do
 	# FIXME: copied from features/step_definitions.rb
 	it 'should create a directory structure from default' do
 	    Dir.chdir @project_dir
-	    @lw.init
+	    @controller.init
 	    Dir['*','*/**'].sort.should == ["AUTHORS", "COPYING", "Makefile", "README", "TODO",
     "scripts", "scripts/build", "scripts/clean", "scripts/config"]
 	end
