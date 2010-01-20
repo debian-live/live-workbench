@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'rake'
 require 'spec/rake/spectask'
+require 'cucumber/rake/task'
 
 namespace 'doc' do
     XSLTPROC='/usr/bin/xsltproc'
@@ -30,3 +31,6 @@ end
 Spec::Rake::SpecTask.new do |t|
     t.spec_files = FileList['spec/**/*.rb']
 end
+
+Cucumber::Rake::Task.new
+
