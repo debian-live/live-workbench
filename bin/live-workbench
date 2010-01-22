@@ -1,0 +1,12 @@
+#!/usr/bin/ruby1.8
+$:.unshift(File.dirname(__FILE__ + '.rb') + '/../lib') unless $:.include?(File.dirname(__FILE__ + '.rb') + '/../lib')
+require 'live-workbench'
+require 'live-workbench/cli'
+
+begin
+    lw=LiveWorkbench::CLI.new
+    lw.execute ARGV.dup
+rescue ArgumentError => e
+    STDERR.puts e.message
+    Kernel.exit 1
+end
