@@ -7,14 +7,19 @@
     - model = project.rb (an abstraction of filesystem)
     x controller = controller.rb
     x view = cli.rb
-    - review controller/view relationship
+    - is this design really MVC?
       - how does controller make changes to a view?  currently there is no
         way (e.g. rails 'render')
+      - really, the goal is not strict adherence to MVC, but to abstract
+        out the cli and filesystem from the core of the app (controller.rb)
+        in preparation for possible future 'railsification' of the app
 * config.rb
   - generate config via setup.rb hook
   - see example code from Mozillion
     - http://svn.luon.net/filedetails.php?repname=goat&path=/trunk/lib/pre-setup.rb
     - http://svn.luon.net/filedetails.php?repname=goat&path=/trunk/lib/post-clean.rb
+* configuration/options
+  - use OptionParser
 
 See also:
 
