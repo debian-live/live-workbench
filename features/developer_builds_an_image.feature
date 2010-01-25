@@ -6,6 +6,7 @@ Feature: developer builds an image
     build, including the name of the directory where the build products (image,
     log, lists of image contents) have been created. 
     
+@new_project_dir
     Scenario: build an image from an existing configuration
 	Given I am in the project top-level directory
 	And an image configuration exists
