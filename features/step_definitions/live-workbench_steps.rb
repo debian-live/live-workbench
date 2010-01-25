@@ -6,8 +6,9 @@ Given /^I am in an empty directory where I want the project to be created$/ do
 end
 
 When /^I start the project$/ do
-  @messenger=StringIO.new
-  lw=LiveWorkbench.new(@messenger)
+  @output_stream=StringIO.new
+  @error_stream=StringIO.new
+  lw=LiveWorkbench::CLI.new(@output_stream,@error_stream)
   lw.init
 end
 
@@ -17,11 +18,15 @@ Then /^the directory is populated with a standard project structure$/ do
 end
 
 Then /^I see a message indicating that the project was created$/ do
-  @messenger.string.split("\n").should include("Project created from default template")
+  @output_stream.string.split("\n").should include("Project created from default template")
 end
 
 Given /^I am in the project top\-level directory$/ do
-  pending
+  Dir.chdir @project_dir
+  @output_stream=StringIO.new
+  @error_stream=StringIO.new
+  lw=LiveWorkbench::CLI.new(@output_stream,@error_stream)
+  lw.init
 end
 
 Given /^an image configuration exists$/ do
