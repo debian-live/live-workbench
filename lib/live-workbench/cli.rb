@@ -1,7 +1,10 @@
 module LiveWorkbench
     class CLI
-	def initialize(messenger=STDOUT,controller=Controller.new)
-	    @messenger=messenger
+	attr_accessor :output_stream,:error_streamm
+
+	def initialize(output_stream=STDOUT,error_stream=STDERR,controller=Controller.new)
+	    @output_stream=output_stream
+	    @error_stream=error_stream
 	    @controller=controller
 	end
 
@@ -18,7 +21,7 @@ module LiveWorkbench
 
 	def init template='default'
 	    @controller.init template
-	    @messenger.puts "Project created from #{template} template"
+	    @output_stream.puts "Project created from #{template} template"
 	end
     end
 end

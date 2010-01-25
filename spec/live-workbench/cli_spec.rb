@@ -4,18 +4,19 @@ require 'live-workbench/cli'
 describe LiveWorkbench::CLI do
     before :each do
 	@controller=mock('controller',:init=>true)
-	@messenger=mock('messenger')
-	@lw=LiveWorkbench::CLI.new(@messenger,@controller)
+	@output_stream=mock('output_stream')
+	@error_stream=mock('error_stream')
+	@lw=LiveWorkbench::CLI.new(@output_stream,@error_stream,@controller)
     end
 
     describe '#init' do
 	it 'should use default template by default' do
-	    @messenger.should_receive(:puts).with('Project created from default template')
+	    @output_stream.should_receive(:puts).with('Project created from default template')
 	    @lw.init
 	end
 
 	it 'should use specified template' do
-	    @messenger.should_receive(:puts).with('Project created from fancy template')
+	    @output_stream.should_receive(:puts).with('Project created from fancy template')
 	    @lw.init('fancy')
 	end
     end
