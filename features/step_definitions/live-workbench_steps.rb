@@ -1,7 +1,6 @@
 require 'tmpdir'
 
 Given /^I am in an empty directory where I want the project to be created$/ do
-  Dir.chdir @project_dir
   Dir.new(Dir.pwd).count.should <= 2
 end
 
@@ -22,7 +21,6 @@ Then /^I see a message indicating that the project was created$/ do
 end
 
 Given /^I am in the project top\-level directory$/ do
-  Dir.chdir @project_dir
   @output_stream=StringIO.new
   @error_stream=StringIO.new
   lw=LiveWorkbench::CLI.new(@output_stream,@error_stream)
