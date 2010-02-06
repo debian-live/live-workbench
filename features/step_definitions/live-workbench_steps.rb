@@ -4,6 +4,10 @@ Given /^I am in an empty directory where I want the project to be created$/ do
   Dir.new(Dir.pwd).count.should <= 2
 end
 
+When /^I run live-workbench (.*)$/ do |live_workbench_opts|
+      run "#{LiveWorkbench::RUBY_BINARY} #{LiveWorkbench::BINARY} #{live_workbench_opts}"
+end
+
 When /^I start the project$/ do
   @output_stream=StringIO.new
   @error_stream=StringIO.new

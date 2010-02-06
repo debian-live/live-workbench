@@ -10,7 +10,7 @@ Feature: developer builds an image
     Scenario: build an image from an existing configuration
 	Given I am in the project top-level directory
 	And an image configuration exists
-	When I build an image without specifying parameters
+	When I run live-workbench build
 	Then an image build is started
 	And I see colorized output as it progresses
 	And I see a successful build message including path to the built image

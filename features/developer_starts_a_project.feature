@@ -7,6 +7,6 @@ Feature: developer starts a project
     @new_project_dir
     Scenario: start a project
 	Given I am in an empty directory where I want the project to be created
-	When I start the project
+	When I run live-workbench init
 	Then the directory is populated with a standard project structure
 	And I see a message indicating that the project was created

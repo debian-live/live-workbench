@@ -6,6 +6,6 @@ Feature: developer creates an image configuration
 @new_project_dir
     Scenario: create an image configuration using defaults
 	Given I am in the project top-level directory
-	When I configure an image without specifying parameters
+	When I run live-workbench config
 	Then scripts are created for a default configuration
 	And I see a message indicating that the image configuration was created using defaults
