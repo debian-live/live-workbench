@@ -5,14 +5,14 @@ Given /^I am in an empty directory where I want the project to be created$/ do
 end
 
 When /^I run live-workbench (.*)$/ do |live_workbench_opts|
-      run "#{LiveWorkbench::RUBY_BINARY} #{LiveWorkbench::BINARY} #{live_workbench_opts}"
+  run "#{LiveWorkbench::RUBY_BINARY} #{LiveWorkbench::BINARY} #{live_workbench_opts}"
 end
 
 When /^I start the project$/ do
-  @output_stream=StringIO.new
-  @error_stream=StringIO.new
-  lw=LiveWorkbench::CLI.new(@output_stream,@error_stream)
-  lw.init
+  capture_streams do |stdout,stderr|
+      lw=LiveWorkbench::CLI.new(stdout,stderr)
+      lw.init
+  end
 end
 
 Then /^the directory is populated with a standard project structure$/ do
@@ -21,14 +21,14 @@ Then /^the directory is populated with a standard project structure$/ do
 end
 
 Then /^I see a message indicating that the project was created$/ do
-  @output_stream.string.split("\n").should include("Project created from default template")
+  @last_stdout.split("\n").should include("Project created from default template")
 end
 
 Given /^I am in the project top\-level directory$/ do
-  @output_stream=StringIO.new
-  @error_stream=StringIO.new
-  lw=LiveWorkbench::CLI.new(@output_stream,@error_stream)
-  lw.init
+  capture_streams do |stdout,stderr|
+      lw=LiveWorkbench::CLI.new(stdout,stderr)
+      lw.init
+  end
 end
 
 Given /^an image configuration exists$/ do

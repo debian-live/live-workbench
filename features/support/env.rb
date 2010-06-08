@@ -17,4 +17,11 @@ def run(command)
     @last_stderr = IO.read(stderr_file.path)
 end
 
+def capture_streams
+    stdout=StringIO.new
+    stderr=StringIO.new
+    yield stdout,stderr
+    @last_stdout=stdout.string
+    @last_stderr=stderr.string
+end
 
