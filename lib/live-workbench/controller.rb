@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module LiveWorkbench
     class Controller
 	attr_accessor :config
