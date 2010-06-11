@@ -19,7 +19,7 @@ describe LiveWorkbench::Controller do
 	    Dir.chdir @project_dir
 	    @controller.init
 	    Dir['*','*/**'].sort.should == ["AUTHORS", "COPYING", "Makefile", "README", "TODO",
-    "scripts", "scripts/build", "scripts/clean", "scripts/config"]
+    "auto", "auto/build", "auto/clean", "auto/config"]
 	end
     end
 end
