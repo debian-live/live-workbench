@@ -4,15 +4,12 @@ Given /^I am in an empty directory where I want the project to be created$/ do
   Dir.new(Dir.pwd).count.should <= 2
 end
 
-When /^I run live-workbench (.*)$/ do |live_workbench_opts|
-  run "#{LiveWorkbench::RUBY_BINARY} #{LiveWorkbench::BINARY} #{live_workbench_opts}"
+When /^I run live-workbench (.*)$/ do |opts|
+  run_lw opts
 end
 
 When /^I start the project$/ do
-  capture_streams do |stdout,stderr|
-      lw=LiveWorkbench::CLI.new(stdout,stderr)
-      lw.init
-  end
+  with_lw {|lw| lw.init}
 end
 
 Then /^the directory is populated with a standard project structure$/ do
@@ -25,10 +22,7 @@ Then /^I see a message indicating that the project was created$/ do
 end
 
 Given /^I am in the project top\-level directory$/ do
-  capture_streams do |stdout,stderr|
-      lw=LiveWorkbench::CLI.new(stdout,stderr)
-      lw.init
-  end
+  with_lw {|lw| lw.init}
 end
 
 Given /^an image configuration exists$/ do
