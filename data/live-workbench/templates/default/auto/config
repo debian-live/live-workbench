@@ -1,7 +1,7 @@
 #!/bin/sh
 
-MIRROR_DEBIAN="${1:-http://http.us.debian.org/debian/}"
-MIRROR_SECURITY="${2:-http://http.us.debian.org/debian-security/}"
+MIRROR_DEBIAN="${1:-http://cdn.debian.net/debian/}"
+MIRROR_SECURITY="${2:-http://cdn.debian.net/debian-security/}"
 
 lh config noautoconfig \
 	--distribution squeeze \
