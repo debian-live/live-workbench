@@ -3,7 +3,7 @@
 MIRROR_DEBIAN="${1:-http://cdn.debian.net/debian/}"
 MIRROR_SECURITY="${2:-http://cdn.debian.net/debian-security/}"
 
-lh config noautoconfig \
+lh config noauto \
 	--distribution squeeze \
 	--mirror-bootstrap ${MIRROR_DEBIAN} \
 	--mirror-chroot ${MIRROR_DEBIAN} \
