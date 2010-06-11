@@ -17,7 +17,7 @@ end
 
 Then /^the directory is populated with a standard project structure$/ do
   Dir['*','*/**'].sort.should == ["AUTHORS", "COPYING", "Makefile", "README", "TODO",
-    "scripts", "scripts/build", "scripts/clean", "scripts/config"]
+    "auto", "auto/build", "auto/clean", "auto/config"]
 end
 
 Then /^I see a message indicating that the project was created$/ do

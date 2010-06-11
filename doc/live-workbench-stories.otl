@@ -10,7 +10,7 @@ live-workbench stories
 			creating project structure
 				Rakefile
 				config
-				scripts
+				auto
 				test
 				doc
 	Live systems developer configures the first image
@@ -20,7 +20,7 @@ live-workbench stories
 			: configuration was created (using live-helper's own defaults).
 		essential
 		differs from l-h by
-			initializing but not executing the config in scripts/config
+			initializing but not executing the config in auto/config
 	Live systems developer views an image configuration
 	Live systems developer builds an image
 		story
