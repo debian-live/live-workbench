@@ -23,6 +23,11 @@ module LiveWorkbench
 	    @controller.init template
 	    @output_stream.puts "Project created from #{template} template"
 	end
+
+	def auto template='default'
+	    @controller.auto template
+	    @output_stream.puts "Auto-configuration created from #{template} template"
+	end
     end
 end
 

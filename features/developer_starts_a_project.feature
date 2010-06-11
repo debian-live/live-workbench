@@ -9,4 +9,4 @@ Feature: developer starts a project
 	Given I am in an empty directory where I want the project to be created
 	When I run live-workbench init
 	Then the directory is populated with a standard project structure
-	And I see a message indicating that the project was created
+	And I see "Project created from default template"

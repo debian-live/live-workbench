@@ -18,8 +18,17 @@ describe LiveWorkbench::Controller do
 	it 'should create a directory structure from default' do
 	    Dir.chdir @project_dir
 	    @controller.init
-	    Dir['*','*/**'].sort.should == ["AUTHORS", "COPYING", "Makefile", "README", "TODO",
-    "auto", "auto/build", "auto/clean", "auto/config"]
+	    Dir['*','*/**'].sort.should == ["AUTHORS", "COPYING", "Makefile", "README", "TODO"]
+	end
+    end
+
+    describe '#auto','(default)' do
+	# FIXME: copied from features/step_definitions.rb
+	it 'should create auto-config from default' do
+	    Dir.chdir @project_dir
+	    @controller.init
+	    @controller.auto
+	    Dir['auto/**'].sort.should == ["auto/build", "auto/clean", "auto/config"]
 	end
     end
 end
