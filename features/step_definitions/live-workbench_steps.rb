@@ -24,11 +24,7 @@ Given /^I am in the project top\-level directory$/ do
 end
 
 Given /^an image configuration exists$/ do
-  pending
-end
-
-When /^I build an image without specifying parameters$/ do
-  pending
+  with_lw {|lw| lw.auto}
 end
 
 Then /^an image build is started$/ do
