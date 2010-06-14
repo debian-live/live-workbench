@@ -39,10 +39,6 @@ Then /^I see a successful build message including path to the built image$/ do
   pending
 end
 
-When /^I configure an image without specifying parameters$/ do
-  pending
-end
-
 Then /^auto scripts are created for a default configuration$/ do
   Dir['auto/**'].sort.should == ["auto/build", "auto/clean", "auto/config"]
 end
