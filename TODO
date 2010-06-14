@@ -1,7 +1,11 @@
+* use Thread.new for build to allow concurrent build and processing (colorization)
+  of output
+* design to allow output to be directed to a different window, though initially
+  just the current stdout
 * refactor duplicate code in spec & feature step definitions
   - the feature is supposed to exercise the whole stack, from view through
     controller to model.  the duplicate code indicates a bigger problem, that
-    the feature therefore tests too low a leve with the model & view tightly
+    the feature therefore tests too low a level with the model & view tightly
     coupled to controller in core.rb
   - follow MVC
     - model = project.rb (an abstraction of filesystem)
