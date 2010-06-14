@@ -23,8 +23,8 @@ end
 
 def with_lw
   capture_streams do |stdout,stderr|
-    lw=LiveWorkbench::CLI.new(stdout,stderr)
-    yield lw
+    @lw||=LiveWorkbench::CLI.new(stdout,stderr)
+    yield @lw
   end
 end
 
