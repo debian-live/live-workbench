@@ -28,6 +28,14 @@ module LiveWorkbench
 	    @controller.auto template
 	    @output_stream.puts "Auto-configuration created from #{template} template"
 	end
+
+	def build
+	    @controller.build
+	end
+
+	def status
+	    @controller.status
+	end
     end
 end
 

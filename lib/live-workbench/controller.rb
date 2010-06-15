@@ -26,5 +26,13 @@ module LiveWorkbench
 	    # FIXME: destination needs to be verified
 	    FileUtils.cp_r template_dir,'auto'
 	end
+
+	def build
+	    # TODO: fork a build (output to named pipe? lockfile with pid?)
+	end
+
+	def status
+	    # TODO: check a build in progress (process matching lockfile pid?)
+	end
     end
 end

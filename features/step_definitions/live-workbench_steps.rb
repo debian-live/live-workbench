@@ -29,10 +29,12 @@ end
 
 Then /^an image build is started$/ do
   pending
+  with_lw {|lw| lw.status.should == :building}
 end
 
 Then /^I see colorized output as it progresses$/ do
   pending
+  with_lw {|lw| lw.log.should contain(COLOR_SEQ)}
 end
 
 Then /^I see a successful build message including path to the built image$/ do
