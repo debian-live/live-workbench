@@ -1,5 +1,3 @@
-require 'tmpdir'
-
 Given /^I am in an empty directory where I want the project to be created$/ do
 end
 
