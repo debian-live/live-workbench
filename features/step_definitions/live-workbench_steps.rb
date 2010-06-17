@@ -1,4 +1,5 @@
 Given /^I am in an empty directory where I want the project to be created$/ do
+  # see Before hook for @new_project_dir
 end
 
 When /^I run live-workbench (.*)$/ do |opts|
