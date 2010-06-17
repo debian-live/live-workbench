@@ -13,4 +13,4 @@ Feature: developer builds an image
 	When I run live-workbench build
 	Then an image build is started
 	And I see colorized output as it progresses
-	And I see a successful build message including path to the built image
+	And I see "Live image created in: #{Dir.pwd}"

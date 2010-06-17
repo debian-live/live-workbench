@@ -23,13 +23,13 @@ Given /^an image configuration exists$/ do
 end
 
 Then /^an image build is started$/ do
-  pending
-  with_lw {|lw| lw.status.should == :building}
+  @last_stdout.should match(/building/)
 end
 
+ANSI_COLOR_SEQ="\e[0m"
+
 Then /^I see colorized output as it progresses$/ do
-  pending
-  with_lw {|lw| lw.log.should contain(COLOR_SEQ)}
+  @last_stdout.should match(/#{Regexp.quote(ANSI_COLOR_SEQ)}/)
 end
 
 Then /^auto scripts are created for a default configuration$/ do
